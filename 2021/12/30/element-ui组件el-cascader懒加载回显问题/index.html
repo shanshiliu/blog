@@ -4,17 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>刘得青山在</title>
+  <title>element-ui组件el-cascader懒加载回显问题 | 刘得青山在</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="web front end">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘得青山在">
-<meta property="og:url" content="https://shanshiliu.github.io/blog/index.html">
+  <meta name="description" content="使用element-ui组件的级联选择器时，业务中用到了懒加载的方式，但是编辑时的回显就出了问题，官方文档也没有好给出示例。 实现回显的思路：如果级联选择器el-cascader当前有绑定的数据，则多请求一个层级的数据，如果没有则自动执行懒加载两种情况：  1、如果绑定数据需要异步获取 采用v-if方案即可  2、如果绑定数据是 初始化定义或 props传入数据 手动执行懒加载节点数据后、绑定到c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="element-ui组件el-cascader懒加载回显问题">
+<meta property="og:url" content="https://shanshiliu.github.io/blog/2021/12/30/element-ui%E7%BB%84%E4%BB%B6el-cascader%E6%87%92%E5%8A%A0%E8%BD%BD%E5%9B%9E%E6%98%BE%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="刘得青山在">
-<meta property="og:description" content="web front end">
+<meta property="og:description" content="使用element-ui组件的级联选择器时，业务中用到了懒加载的方式，但是编辑时的回显就出了问题，官方文档也没有好给出示例。 实现回显的思路：如果级联选择器el-cascader当前有绑定的数据，则多请求一个层级的数据，如果没有则自动执行懒加载两种情况：  1、如果绑定数据需要异步获取 采用v-if方案即可  2、如果绑定数据是 初始化定义或 props传入数据 手动执行懒加载节点数据后、绑定到c">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-12-30T05:46:00.000Z">
+<meta property="article:modified_time" content="2022-01-05T05:15:55.903Z">
 <meta property="article:author" content="刘得青山在">
-<meta property="article:tag" content="html js vue web frontend">
+<meta property="article:tag" content="element-ui、组件、el-cascader">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/blog/atom.xml" title="刘得青山在" type="application/atom+xml">
@@ -76,9 +78,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-element-ui组件el-cascader懒加载回显问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-element-ui组件el-cascader懒加载回显问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/blog/2021/12/30/element-ui%E7%BB%84%E4%BB%B6el-cascader%E6%87%92%E5%8A%A0%E8%BD%BD%E5%9B%9E%E6%98%BE%E9%97%AE%E9%A2%98/" class="article-date">
   <time class="dt-published" datetime="2021-12-30T05:46:00.000Z" itemprop="datePublished">2021-12-30</time>
@@ -91,8 +91,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/blog/2021/12/30/element-ui%E7%BB%84%E4%BB%B6el-cascader%E6%87%92%E5%8A%A0%E8%BD%BD%E5%9B%9E%E6%98%BE%E9%97%AE%E9%A2%98/">element-ui组件el-cascader懒加载回显问题</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      element-ui组件el-cascader懒加载回显问题
     </h1>
   
 
@@ -119,11 +119,9 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
   
+</article>
 
 
 </section>
